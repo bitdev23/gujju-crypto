@@ -1,0 +1,389 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+}
+
+header {
+    padding: 20px 0;
+    background: linear-gradient(90deg, #1a2a3b, #3c4a61);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1dbf73;
+    transform: scale(1.05);
+}
+
+.nav-links a.active {
+    color: #1dbf73;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1dbf73;
+}
+
+/* Hero Section */
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2e3a59, #1dbf73);
+    color: white;
+    padding: 0 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-left p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    background-color: #1dbf73;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #16a25d;
+}
+
+.download {
+    background-color: #232323;
+}
+
+.ratings {
+    margin-top: 30px;
+}
+
+.rating span {
+    font-size: 24px;
+}
+
+/* Hero Right Section */
+.hero-right {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#lottie-container {
+    width: 100%;
+    height: 100%;
+    max-width: 500px; /* Limit max size */
+}
+
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 50px;
+    background: #ffffff;
+}
+
+.about-left {
+    width: 60%;
+}
+
+.about-left h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666666;
+}
+
+.about-right {
+    width: 40%;
+}
+
+.about-right img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section */
+.services {
+    padding: 60px 50px;
+    background: #f9f9f9;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service {
+    width: 30%;
+    text-align: center;
+}
+
+.service img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 16px;
+    color: #555555;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 50px;
+    background: #fff;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    background-color: #1dbf73;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #16a25d;
+}
+
+/* Blog Section */
+.blog {
+    padding: 60px 50px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.blog h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.blog-post {
+    width: 30%;
+    text-align: center;
+}
+
+.blog-post img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+.blog-post h3 {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    color: #555555;
+}
+
+.blog-post a {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #1dbf73;
+    text-decoration: none;
+}
+
+.blog-post a:hover {
+    color: #16a25d;
+}
+
+/* Footer Section */
+footer {
+    background-color: #2e3a59;
+    color: white;
+    padding: 40px 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    width: 30%;
+}
+
+.footer-left .logo {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-left .social-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer-left .social-links li {
+    margin-right: 20px;
+}
+
+.footer-left .social-links a {
+    color: white;
+    font-size: 20px;
+}
+
+.footer-middle ul, .footer-right ul {
+    list-style: none;
+}
+
+.footer-middle ul li, .footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-middle ul li a, .footer-right ul li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-right p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-left {
+    padding: 20px;
+}
+
+.cta-btn {
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #ff3b30;
+    transform: scale(1.1);
+}
+
+.cta-btn.download:hover {
+    background-color: #007aff;
+}

@@ -1,0 +1,64 @@
+[debug] [2024-12-13T14:24:01.746Z] ----------------------------------------------------------------------
+[debug] [2024-12-13T14:24:01.750Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\bhavi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-12-13T14:24:01.751Z] CLI Version:   13.29.0
+[debug] [2024-12-13T14:24:01.751Z] Platform:      win32
+[debug] [2024-12-13T14:24:01.751Z] Node Version:  v20.14.0
+[debug] [2024-12-13T14:24:01.752Z] Time:          Fri Dec 13 2024 19:54:01 GMT+0530 (India Standard Time)
+[debug] [2024-12-13T14:24:01.752Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-13T14:24:01.762Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-13T14:24:01.762Z] > authorizing via signed-in user (bitdev23@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\bhavi\Documents\Gujju Crypto Club
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-12-13T14:24:15.958Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:15.959Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:15.960Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-12-13T14:24:15.961Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"cryptobaskets24","name":"cbaskets24"}
+[debug] [2024-12-13T14:24:17.867Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-12-13T14:24:17.868Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.9147207505556588156"}
+[debug] [2024-12-13T14:24:17.869Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:17.869Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:17.869Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 [none]
+[debug] [2024-12-13T14:24:19.504Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 200
+[debug] [2024-12-13T14:24:19.504Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 {"name":"operations/cp.9147207505556588156"}
+[debug] [2024-12-13T14:24:20.013Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-12-13T14:24:20.013Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:20.014Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:20.014Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 [none]
+[debug] [2024-12-13T14:24:20.594Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 200
+[debug] [2024-12-13T14:24:20.594Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 {"name":"operations/cp.9147207505556588156","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2024-12-13T14:24:21.595Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-12-13T14:24:21.595Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:21.596Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:21.596Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 [none]
+[debug] [2024-12-13T14:24:22.166Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 200
+[debug] [2024-12-13T14:24:22.166Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.9147207505556588156 {"name":"operations/cp.9147207505556588156","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"982165135851","projectId":"cryptobaskets24","lifecycleState":"ACTIVE","name":"cbaskets24","createTime":"2024-12-13T14:24:23.265907Z"}}
+[debug] [2024-12-13T14:24:22.168Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:22.168Z] Checked if tokens are valid: true, expires at: 1734102616652
+[debug] [2024-12-13T14:24:22.168Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/cryptobaskets24:addFirebase [none]
+[debug] [2024-12-13T14:24:23.499Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/cryptobaskets24:addFirebase 403
+[debug] [2024-12-13T14:24:23.499Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/cryptobaskets24:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-12-13T14:24:23.500Z] Request to https://firebase.googleapis.com/v1beta1/projects/cryptobaskets24:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2024-12-13T14:24:23.681Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/cryptobaskets24:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\bhavi\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\bhavi\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
