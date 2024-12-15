@@ -1,0 +1,8 @@
+{
+  "name": "Gujju Crypto Club",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bitdev23/gujju-crypto",
+  "author": "Bitdev23 <bitdev23@gmail.com>",
+  "license": "MIT"
+}
