@@ -61,6 +61,7 @@ function showContent(contentType) {
     contentItems.forEach(item => item.classList.add('hidden'));
 
     // Show the selected content
+    // Show the selected content
     const activeContent = document.getElementById(`${contentType}-content`);
     activeContent.classList.remove('hidden');
 }
