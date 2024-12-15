@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Add the Google reCAPTCHA script -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 </head>
 <body>
 
@@ -54,21 +54,37 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-left">
-            <h2>About Us</h2>
-            <p>
-                We provide AI-powered crypto thematic baskets to grow your portfolio with intelligent, diversified solutions. Our mission is to make crypto investments accessible and profitable for everyone. <br><br>
-                We are a pioneering crypto investment platform specializing in expertly curated AI-powered crypto baskets, tailored to suit diverse investment themes and strategies.<br><br>
-Our mission is to simplify crypto investing by offering innovative solutions with unique features, enabling users to diversify their portfolios and stay ahead in the rapidly evolving crypto market.<br><br>
-With a blend of cutting-edge technology and deep market insights, we empower both novice and seasoned investors to make informed, strategic decisions. ><br>
-                
-            </p>
-        </div>
-        <div class="about-right">
-            <img src="/assets/about.png" alt="About Us Image">
-        </div>
+        <section id="about" class="about">
+            <div class="about-container">
+                <!-- Buttons for toggling content -->
+                <div class="about-buttons">
+                    <button id="toggle-basket" class="about-btn active" onclick="showContent('basket')">Crypto Baskets</button>
+                    <button id="toggle-investment" class="about-btn" onclick="showContent('investment')">Investment Strategies</button>
+                    <button id="toggle-coins" class="about-btn" onclick="showContent('coins')">Simple Coins</button>
+                </div>
+        
+                <!-- Content Area -->
+                <div id="about-content">
+                    <!-- Crypto Baskets Content -->
+                    <div class="about-content-item" id="basket-content">
+                        <img src="/assets/cryptobasket.webp" alt="Crypto Baskets">
+                        <p>Our AI-powered Crypto Baskets help you diversify and optimize your portfolio with ease. Automated rebalancing ensures your investments stay on track.</p>
+                    </div>
+                    <!-- Investment Strategies Content -->
+                    <div class="about-content-item hidden" id="investment-content">
+                        <img src="/assets/insight.avif" alt="Investment Strategies">
+                        <p>Investment strategies tailored to your goals. Maximize returns with AI-driven insights and real-time market analysis.</p>
+                    </div>
+                    <!-- Simple Coins Content -->
+                    <div class="about-content-item hidden" id="coins-content">
+                        <img src="/assets/portfolio.webp" alt="Simple Coins">
+                        <p>Start simple! Invest in the most promising cryptocurrencies with our beginner-friendly approach.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
     </section>
 
     <!-- Services Section -->
@@ -76,17 +92,32 @@ With a blend of cutting-edge technology and deep market insights, we empower bot
         <h2>Our Services</h2>
         <div class="services-container">
             <div class="service">
-                <img src="/assets/cryptobasket.webp" alt="Service 1">
+                <img src="/assets/s1.png" alt="Service 1">
                 <h3>AI-powered Baskets</h3>
                 <p>Invest in automated crypto baskets powered by AI that optimize your portfolio based on market trends.</p>
             </div>
             <div class="service">
-                <img src="/assets/portfolio.webp" alt="Service 2">
+                <img src="/assets/s2.png" alt="Service 2">
                 <h3>Crypto Portfolio Management</h3>
                 <p>Expert portfolio management services tailored to meet your investment goals and risk preferences.</p>
             </div>
             <div class="service">
-                <img src="/assets/insight.avif" alt="Service 3">
+                <img src="/assets/s3.png" alt="Service 3">
+                <h3>Real-Time Insights</h3>
+                <p>Get real-time market insights and automated trading signals to make informed investment decisions.</p>
+            </div>
+            <div class="service">
+                <img src="/assets/s1.png" alt="Service 4">
+                <h3>AI-powered Baskets</h3>
+                <p>Invest in automated crypto baskets powered by AI that optimize your portfolio based on market trends.</p>
+            </div>
+            <div class="service">
+                <img src="/assets/s2.png" alt="Service 5">
+                <h3>Crypto Portfolio Management</h3>
+                <p>Expert portfolio management services tailored to meet your investment goals and risk preferences.</p>
+            </div>
+            <div class="service">
+                <img src="/assets/s3.png" alt="Service 6">
                 <h3>Real-Time Insights</h3>
                 <p>Get real-time market insights and automated trading signals to make informed investment decisions.</p>
             </div>
@@ -100,7 +131,7 @@ With a blend of cutting-edge technology and deep market insights, we empower bot
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
-            <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+            <!-- <div class="g-recaptcha" data-sitekey="your-site-key"></div> -->
             <button type="submit">Submit</button>
         </form>
     </section>

@@ -46,3 +46,21 @@ function toggleMenu() {
   }
 
 
+// JavaScript for handling toggles
+function showContent(contentType) {
+    // Get all buttons and remove the active class
+    const buttons = document.querySelectorAll('.about-btn');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Add the active class to the clicked button
+    const activeButton = document.getElementById(`toggle-${contentType}`);
+    activeButton.classList.add('active');
+
+    // Get all content items and hide them
+    const contentItems = document.querySelectorAll('.about-content-item');
+    contentItems.forEach(item => item.classList.add('hidden'));
+
+    // Show the selected content
+    const activeContent = document.getElementById(`${contentType}-content`);
+    activeContent.classList.remove('hidden');
+}
