@@ -63,7 +63,6 @@ nav {
 }
 
 /* Hero Section */
-/* Hero Section Styles */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -164,6 +163,15 @@ nav {
     color: #666666;
 }
 
+/* Style for the About Us section image */
+.about-right img {
+    width: 100%; /* Make the image span the entire width of the parent container */
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    object-fit: cover; /* Optional: Ensures the image covers the space without stretching */
+}
+/* 
 .about-right {
     width: 40%;
 }
@@ -172,7 +180,7 @@ nav {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Services Section */
 .services {
@@ -320,29 +328,48 @@ footer {
     margin: 0 auto;
 }
 
-.footer-left, .footer-middle, .footer-right {
-    width: 30%;
+/* Ensure social links are displayed horizontally */
+footer .social-links {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: center; /* Center the logos horizontally */
+    gap: 15px; /* Add space between logos */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
 }
 
-.footer-left .logo {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 10px;
+/* Style the social links */
+footer .social-links li {
+    display: inline-block; /* Ensure list items behave like inline elements */
 }
 
-.footer-left .social-links {
-    list-style: none;
-    display: flex;
+/* General styling for footer logos (as before) */
+footer .social-links img {
+    width: 25px; /* Set the size of the logos */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overscaling */
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-.footer-left .social-links li {
-    margin-right: 20px;
+/* Hover effect for logos */
+footer .social-links img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-.footer-left .social-links a {
-    color: white;
-    font-size: 20px;
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    footer .social-links img {
+        width: 30px; /* Reduce logo size for tablets */
+    }
 }
+
+@media (max-width: 480px) {
+    footer .social-links img {
+        width: 25px; /* Reduce logo size for mobile */
+    }
+}
+
+
 
 .footer-middle ul, .footer-right ul {
     list-style: none;
@@ -387,3 +414,359 @@ html {
 .cta-btn.download:hover {
     background-color: #007aff;
 }
+
+
+/* Responsive Styles (Media Queries) */
+
+/* Mobile Devices (Portrait) */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 32px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .about-left, .about-right {
+        width: 100%;
+    }
+
+    .services-container {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablets (Portrait) */
+@media screen and (max-width: 1024px) {
+    .hero-left h1 {
+        font-size: 36px;
+    }
+
+    .hero-left p {
+        font-size: 18px;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 50px 30px;
+    }
+
+    .services-container {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+  }
+  
+  header {
+    padding: 20px 0;
+    background: linear-gradient(90deg, #1a2a3b, #3c4a61);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li {
+    margin-left: 30px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #1dbf73;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 60px 50px;
+    background: #f9f9f9;
+  }
+  
+  .services h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .service {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .service img {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .service p {
+    font-size: 16px;
+    color: #555555;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Mobile Devices (Portrait) */
+  @media screen and (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .hero-left, .hero-right {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .cta-buttons {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: #2e3a59;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 20px;
+      z-index: 100;
+    }
+  
+    .nav-links li {
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  
+    .menu-icon.open + .nav-links {
+      display: flex;
+    }
+  
+    .services-container {
+      flex-direction: column;
+    }
+  
+    .service {
+      width: 100%;
+    }
+  }
+  
+  /* Tablets (Portrait) */
+  @media screen and (max-width: 1024px) {
+    .hero-left h1 {
+      font-size: 36px;
+    }
+  
+    .services-container {
+      flex-direction: column;
+    }
+  
+    .service {
+      width: 100%;
+    }
+  }
+  
+  /* Blog Section */
+.blog {
+    padding: 40px;
+    text-align: center;
+}
+
+.blog h2 {
+    margin-bottom: 20px;
+}
+
+/* Make sure the blog posts container is responsive and aligned */
+.blog-posts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow blog posts to wrap on smaller screens */
+    margin-top: 20px;
+}
+
+/* Each individual blog post will have a fixed width */
+.blog-post {
+    flex: 1;
+    max-width: 30%; /* Limit each post's width */
+    min-width: 280px; /* Set a minimum width for smaller screens */
+    padding: 20px;
+    background-color: #f4f4f4; /* Optional: add a background color for better contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for better appearance */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+/* On hover, slightly scale the post */
+.blog-post:hover {
+    transform: scale(1.05);
+}
+
+/* Blog post image - responsive */
+.blog-post img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+/* Title and description styles */
+.blog-post h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 15px;
+    height: 60px; /* Limit the height of the title for consistent spacing */
+    overflow: hidden; /* Hide the overflow text */
+    text-overflow: ellipsis; /* Add ellipsis if title is too long */
+}
+
+.blog-post p {
+    font-size: 1rem;
+    color: #555;
+    height: 80px; /* Ensure description height remains consistent */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* On mobile devices, stack the blog posts vertically */
+@media screen and (max-width: 768px) {
+    .blog-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-post {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .blog-post h3 {
+        height: auto; /* Allow title to grow naturally on mobile */
+    }
+
+    .blog-post p {
+        height: auto; /* Allow description to grow naturally on mobile */
+    }
+}
+
+
